@@ -26,7 +26,7 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode *(optional)*
 
-### Screenshot
+### Screenshots
 
 ***Desktop Layout*** (1440 X 900)\
 ![](./screenshots/desktop/home-desktop-light.png)
