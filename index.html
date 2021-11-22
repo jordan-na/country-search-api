@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+   <title>Country Searcher</title>
+</head>
+
+<body class="light-mode">
+   <header class="light-mode">
+      <a href="/index.html">
+         <h1 id="main-header" class="light-mode">Where in the world?</h1>
+      </a>
+      <button id="toggle-dark-btn" class="light-mode homepage-text">
+         <img id="moon-icon" src="./assets/moon-regular.svg">Dark Mode
+      </button>
+   </header>
+   <main>
+      <section id="inputs-container" class="show">
+         <form id="search-form" class="light-mode box-shadow border-radius">
+            <button id="search-btn" type="button">
+               <svg class="light-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="25px"
+                  height="25px">
+                  <path
+                     d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z" />
+               </svg>
+            </button>
+            <input id="search-input" class="light-mode homepage-text" type="text" placeholder="Search for a country...">
+         </form>
+         <div id="region-selector-container">
+            <button id="filter-btn" class="light-mode homepage-text border-radius box-shadow">
+               Filter by Region
+               <svg id="arrow" class="light-mode" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330"
+                  style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                  <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+               	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+               	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+               </svg>
+            </button>
+            <ul id="region-selection" class="light-mode homepage-text border-radius box-shadow">
+               <li>
+                  <button class="region-btn" id="region-btn-africa">Africa</button>
+               </li>
+               <li>
+                  <button class="region-btn" id="region-btn-america">America</button>
+               </li>
+               <li>
+                  <button class="region-btn" id="region-btn-asia">Asia</button>
+               </li>
+               <li>
+                  <button class="region-btn" id="region-btn-europe">Europe</button>
+               </li>
+               <li>
+                  <button class="region-btn" id="region-btn-oceania">Oceania</button>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section id="grid" class="show"></section>
+      <section id="country-page-container">
+         <button id="back-btn" class="light-mode border-radius">
+            <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" class="light-mode">
+               <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+            </svg>
+            Back
+         </button>
+         <div id="country-content-container">
+            <img id="country-flag-img">
+            <div id="country-info-container" class="light-mode">
+               <h2 id="country-name"></h2>
+               <div id="country-stats">
+                  <p><span class="label">Native Name:</span><span id="native-name"></span></p>
+                  <p><span class="label">Population:</span><span id="population"></span></p>
+                  <p><span class="label">Region:</span><span id="region"></span></p>
+                  <p><span class="label">Sub Region:</span><span id="sub-region"></span></p>
+                  <p><span class="label">Capital:</span><span id="capital"></span></p>
+                  <p><span class="label">Top Level Domain:</span><span id="top-level-domain"></span></p>
+                  <p><span class="label">Currencies:</span><span id="currencies"></span></p>
+                  <p><span class="label">Languages:</span><span id="languages"></span></p>
+               </div>
+               <div id="border-countries-container">
+                  <span class="label">Border Countries: </span>
+                  <ul id="border-countries" class="light-mode"></ul>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+   <div id="no-results-message" class="light-mode">
+      <h2>No Results</h2>
+   </div>
+   <div id="error-message" class="light-mode">
+      <h2>Error: Unable to connect to server</h2>
+      <svg height="22" style="overflow:visible;enable-background:new 0 0 32 32" viewBox="0 0 32 32" width="22"
+         xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <g>
+            <g id="Error_1_">
+               <g id="Error">
+                  <circle cx="16" cy="16" id="BG" r="16" style="fill:#D72828;" />
+                  <path d="M14.5,25h3v-3h-3V25z M14.5,6v13h3V6H14.5z" id="Exclamatory_x5F_Sign" style="fill:#E6E6E6;" />
+               </g>
+            </g>
+         </g>
+      </svg>
+   </div>
+   <div id="error-message-page-loader" class="border-radius">
+      Unable to retrieve country data
+      <button id="close-btn">
+         <img src="./assets/close_icon.svg">
+      </button>
+   </div>
+   <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
