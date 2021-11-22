@@ -388,6 +388,10 @@ main.remove-padding {
    justify-content: space-between;
 }
 
+.country-card .country-card-info div .info-label {
+   font-weight: 600;
+}
+
 /* *************************** */
 /*** STYLES FOR COUNTRY PAGE ***/
 /* *************************** */
