@@ -496,6 +496,7 @@ main.remove-padding {
 
 #country-stats p {
    margin: 3px 0;
+   max-width: 325px;
 }
 
 #border-countries-container {
@@ -705,6 +706,9 @@ main.remove-padding {
    #country-stats {
       max-height: none;
       margin: 20px 0 30px 0;
+   }
+   #country-stats p {
+      max-width: none;
    }
    #country-stats p:nth-of-type(5) {
       margin-bottom: 15px;
