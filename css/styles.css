@@ -646,11 +646,20 @@ main.remove-padding {
 }
 
 @media only screen and (max-width: 1381px) {
+   header {
+      padding: 25px 50px;
+   }
+   main {
+      padding: 40px 50px;
+   }
    #grid {
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
    }
    #country-flag-img {
       align-self: flex-start;
+   }
+   .country-card .country-card-info {
+      padding: 14px;
    }
 }
 
@@ -661,6 +670,9 @@ main.remove-padding {
 }
 
 @media only screen and (max-width: 1300px) {
+   #grid {
+      gap: 35px;
+   }
    #country-page-container {
       margin: 50px;
    }
@@ -718,19 +730,6 @@ main.remove-padding {
    }
    #border-countries-container .label {
       margin-bottom: 10px;
-   }
-}
-
-@media only screen and (max-width: 956px) {
-   header {
-      padding: 25px 50px;
-   }
-   main {
-      padding: 40px 50px;
-   }
-   #grid {
-      gap: 35px;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
    }
 }
 
