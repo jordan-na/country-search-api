@@ -3,7 +3,7 @@
 ## Table of contents
 
 -  [Overview](#overview)
-   -  [The challenge](#the-challenge)
+   -  [Features](#features)
    -  [Screenshots](#screenshots)
    -  [Links](#links)
 -  [My process](#my-process)
@@ -15,7 +15,7 @@
 
 ## Overview
 
-### The challenge
+### Features
 
 Users should be able to:
 
