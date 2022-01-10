@@ -50,7 +50,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Respository](https://github.com/jordan-na/country-search-api-single-page.git)
-- Live Site URL: [Hosted on Github Pages](https://jordan-na.github.io/country-search-api-single-page/)
+- Live Site URL: [Hosted on Github Pages](https://jordan-na.github.io/country-search-api/)
 
 ## My process
 
